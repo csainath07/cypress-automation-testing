@@ -20,11 +20,11 @@
     "*.js": [
       "yarn prettier --write",
       "yarn eslint --fix"
-    ],
-    "husky": {
-      "hooks": {
-        "pre-commit": "yarn run pre-commit"
-      }
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run pre-commit"
     }
   }
 }
