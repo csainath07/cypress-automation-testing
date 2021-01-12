@@ -10,7 +10,13 @@
 //
 //
 // -- This is a parent command --
-// Cypress.Commands.add("login", (email, password) => { ... })
+Cypress.Commands.add("login", (email, password) => {
+  cy.visit("/");
+  cy.get("input[name=email]").type("business.dev@peppercontent.in");
+  cy.get("input[name=password]").type("Pepper@123");
+  cy.get("[type=submit]").click();
+  cy.url().should("include", "/");
+});
 //
 //
 // -- This is a child command --
